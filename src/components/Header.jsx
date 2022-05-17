@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header>
-      <h1>Welcome to Quizzy APP</h1>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </header>
   );
 };
