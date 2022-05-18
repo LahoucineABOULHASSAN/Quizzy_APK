@@ -5,7 +5,7 @@ import { QuizIntro, QuizCPU, QuizHD, QuizMB, QuizRAM } from "../pages";
 const Main = () => {
   const [page, setPage] = useState(1);
   return (
-    <main className="w-screen p-5">
+    <main className="w-screen py-5">
       <Home />
       {page === 1 && <QuizIntro />}
       {page === 2 && <QuizMB />}
