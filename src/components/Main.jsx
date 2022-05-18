@@ -1,77 +1,72 @@
+import { useState } from "react";
+import Home from "../pages/Home";
+import { QuizIntro, QuizCPU, QuizHD, QuizMB, QuizRAM } from "../pages";
+
 const Main = () => {
+  const [page, setPage] = useState(1);
   return (
-    <main className="p-5">
-      <div className="mb-2">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/xHQ7Y9YOykk"
-          title="Computer Parts"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div>
-        <p className="p-1 ">salut tout le monde. C'est Lahoucine. Bienvenue.</p>
-        <p className="p-1 ">
-          Vous savez peut-être déjà qu'il existe de nombreuses pièces
-          importantes à l'intérieur d'un ordinateur. Mais c'est quoi le role de
-          chacune ?
-        </p>
-        <p className="p-1 ">
-          Jetons un coup d'œil à l'intérieur et découvrons les différents
-          composants qui font fonctionner un ordinateur. Soit Qu'il s'agisse
-          d'un ordinateur bureau ou d'un ordinateur portable.
-        </p>
-        <p className="p-1 ">
-          Chaque ordinateur possède une grande carte de circuit imprimé appelée
-          carte mère. Il contient certaines des parties les plus importantes de
-          l'ordinateur. c'est ce qu'on va voir aujourdhui{" "}
-        </p>
-        <p className="p-1 ">
-          le CPU (central processing unit) également connu sous le nom
-          micro-processeur. Il peut être considéré comme le cerveau de
-          l'ordinateur. Parce qu'il traite les informations et exécute les
-          commandes. pour cela il s'echauffe , il est recouvert d'un morceau de
-          métal appelé (heat sink) dissipateur de chaleur, qui évacue la chaleur
-          du processeur.{" "}
-        </p>
-        <p className="p-1 ">
-          pour que le cpu puisse faire son traitement, il a besoin d'un
-          ressource de memoire. appeller la RAM (random access memory) ou la
-          mémoire vive. Il s'agit de la mémoire à court terme utilisée par
-          l'ordinateur lorsqu'il effectue des calculs. Cependant, vous ne pouvez
-          pas y stocker vos fichiers. Parce que la RAM est effacée lorsque vous
-          éteignez l'ordinateur
-        </p>
-        <p className="p-1 ">
-          à fin d'etre cappable de stocker les donnees a long term, le cpu
-          utilise Le disque dur. qui peut conserve toutes les données de
-          l'ordinateur même lorsqu'il est éteint. il existe 2 types: HDD: qui
-          utilisent un plateau magnétique pour stocker des données, mais il est
-          tres lempt, . SSD: il est plus rapides et plus durables, mais aussi
-          plus chers.
-        </p>
-        <p className="p-1 ">
-          L'ordinateur est une machine assez complexe mais maintenant que vous
-          avez vu ce qui se passe à l'intérieur, cela devrait être un peu moins
-          mystérieux.
-        </p>
-        <p className="p-1 ">
-          Sur de nombreux ordinateurs de bureau, la carte mère possède des
-          connecteurs d'extension, ce qui vous permet d'effectuer une mise à
-          niveau en ajoutant des cartes d'extension. Vous pouvez ajouter une
-          carte vidéo pour obtenir de meilleures performances graphiques ou une
-          carte sans fil pour vous connecter à votre réseau domestique sans fil.
-          Cependant, la plupart des ordinateurs portables n'ont pas de
-          connecteurs d'extension. Bien sûr, les composants des ordinateurs ont
-          besoin d'électricité pour fonctionner. L'unité d'alimentation est
-          conçue pour prendre l'alimentation de la prise murale et l'envoyer à
-          tous les différents composants qui ont besoin d'alimentation. Les
-          ordinateurs portables contiennent également une batterie intégrée qui
-          vous permet de les utiliser n'importe où.
-        </p>
+    <main className="w-screen p-5">
+      <Home />
+      {page === 1 && <QuizIntro />}
+      {page === 2 && <QuizMB />}
+      {page === 3 && <QuizCPU />}
+      {page === 4 && <QuizRAM />}
+      {page === 5 && <QuizHD />}
+      <div className="flex space-x-2 justify-center">
+        {page > 1 && page < 6 && (
+          <div className="mx-1">
+            <button
+              type="button"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              className="inline-block p2 w-8 h-8 flex justify-center items-center bg-orange-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out"
+              onClick={() => setPage(page - 1)}
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="far"
+                data-icon="arrow-alt-circle-left"
+                className="w-7 h-7"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M8 256c0 137 111 248 248 248s248-111 248-248S393 8 256 8 8 119 8 256zm448 0c0 110.5-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56s200 89.5 200 200zm-72-20v40c0 6.6-5.4 12-12 12H256v67c0 10.7-12.9 16-20.5 8.5l-99-99c-4.7-4.7-4.7-12.3 0-17l99-99c7.6-7.6 20.5-2.2 20.5 8.5v67h116c6.6 0 12 5.4 12 12z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        )}
+        {page > 0 && page < 5 && (
+          <div className="mx-1">
+            <button
+              type="button"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              className="inline-block p2 w-8 h-8 flex justify-center items-center bg-orange-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out"
+              onClick={() => setPage(page + 1)}
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="far"
+                data-icon="arrow-alt-circle-right"
+                className="w-7 h-7"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </main>
   );
