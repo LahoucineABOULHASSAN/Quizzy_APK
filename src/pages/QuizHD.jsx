@@ -23,7 +23,7 @@ const QuizHD = () => {
                   className="form-check-label inline-block text-gray-800"
                   htmlFor="flexCheckChecked"
                 >
-                  Stocker les données d'une façon temporaire.
+                  Stocker les données temporairement.
                 </label>
               </div>
             </li>
@@ -39,7 +39,7 @@ const QuizHD = () => {
                   className="form-check-label inline-block text-gray-800"
                   htmlFor="flexCheckChecked"
                 >
-                  Stocker les données d'une façon permanante.
+                  Stocker les données permanentement.
                 </label>
               </div>
             </li>
