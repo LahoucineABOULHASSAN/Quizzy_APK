@@ -1,8 +1,9 @@
 const QuizCPU = () => {
   return (
     <section className="bg-gray-300 p-2 my-4">
-      <h1 className="mb-4 p-1 pl-4 rounded-md font-medium leading-tight text-2xl text-orange-600">
-        Quizz 3 (5pts):
+      <h1 className="mb-4 p-1 pl-4 rounded-md font-medium leading-tight text-2xl">
+        <span className="text-orange-600 underline"> Quizz 3 :</span>{" "}
+        <small className="text-gray-600">(5pts)</small>
       </h1>
       <div className="">
         <div className="flex justify-center my-4">
