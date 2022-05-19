@@ -1,18 +1,18 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900">
-      <div className="py-6 px-4 bg-gray-800 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-300 sm:text-center">
+    <footer className="w-screen bg-gray-900">
+      <div className="py-6 px-4 bg-gray-800 text-center">
+        <span className="text-sm text-gray-300 text-center">
           © {new Date().getFullYear()}{" "}
-          <a href="https://aboulhassan.netlify.app">Aboulhassan™</a>. All Rights
+          <a href="https://aboulhassan.netlify.app">Quizzy™</a>. All Rights
           Reserved.
         </span>
-        <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+        <div className="flex mt-4 space-x-6 justify-center items-center md:mt-0">
           <a
             href="https://aboulhassan.netlify.app"
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-white"
+            className="text-orange-300 hover:text-orange-600"
           >
             <svg
               className="w-5 h-5"
@@ -31,7 +31,7 @@ const Footer = () => {
             href="https://aboulhassan.netlify.app"
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-white"
+            className="text-orange-300 hover:text-orange-600"
           >
             <svg
               className="w-5 h-5"
@@ -46,7 +46,7 @@ const Footer = () => {
             href="https://aboulhassan.netlify.app"
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-white"
+            className="text-orange-300 hover:text-orange-600"
           >
             <svg
               className="w-5 h-5"

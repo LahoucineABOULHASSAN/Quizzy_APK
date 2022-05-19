@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <nav className="bg-gray-800 border-gray-200 px-2 sm:px-4">
+    <nav className="w-screen bg-gray-800 border-gray-200 px-2 sm:px-4">
       <div className="p-4 flex items-center align-center">
         <div className="w-2/10 inline-block">
           <img
