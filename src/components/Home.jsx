@@ -6,8 +6,8 @@ const Home = () => {
     <section className="py-8">
       <div className="w-11/12 m-auto mb-4">
         <iframe
-          className="md:w-4/6 sm:w-11/12 sm:h-auto m-auto"
-          src="https://www.youtube.com/embed/xHQ7Y9YOykk"
+          className="md:w-4/6 sm:w-11/12 sm:h-5/12 md:w-auto md:h-auto m-auto"
+          src="https://www.youtube.com/embed/L_46_UrCehA"
           title="Computer Parts"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
