@@ -4,9 +4,9 @@ const Home = () => {
   const [displayText, setDisplayText] = useState(false);
   return (
     <section className="py-8">
-      <div className="w-11/12 m-auto mb-4">
+      <div className="video mb-4">
         <iframe
-          className="md:w-4/6 sm:w-11/12 sm:h-5/12 md:w-auto md:h-auto m-auto"
+          className="iframe m-auto"
           src="https://www.youtube.com/embed/L_46_UrCehA"
           title="Computer Parts"
           frameBorder="0"
@@ -14,7 +14,7 @@ const Home = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <div className="w-11/12 m-auto">
+      <div className="w-11/12 mt-4 mx-auto">
         <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
           <input
             type="checkbox"
