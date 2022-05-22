@@ -3,15 +3,15 @@ import TextVideo from "../components/main-comps/TextVideo.jsx";
 const Home = () => {
   const [displayText, setDisplayText] = useState(false);
   return (
-    <section className="mb-4">
-      <div className="w-11/12 m-auto my-2">
+    <section className="py-8">
+      <div className="w-11/12 m-auto mb-4">
         <iframe
-          className="md:w-4/6 sm:w-11/12 sm:h-auto m-auto my-2"
+          className="md:w-4/6 sm:w-11/12 sm:h-auto m-auto"
           src="https://www.youtube.com/embed/xHQ7Y9YOykk"
           title="Computer Parts"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <div className="w-11/12 m-auto">
@@ -20,12 +20,12 @@ const Home = () => {
             type="checkbox"
             name="toggle"
             id="toggle"
-            className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+            className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-2 border-gray-400 appearance-none cursor-pointer"
             onClick={(e) => setDisplayText(!displayText)}
           />
           <label
             htmlFor="toggle"
-            className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+            className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-400 cursor-pointer"
           ></label>
         </div>
         <label htmlFor="toggle" className="text-xs text-gray-700">
